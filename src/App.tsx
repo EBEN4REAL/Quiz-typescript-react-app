@@ -55,7 +55,10 @@ const  App = () => {
   }
   
   const nextQuestion = () => {
+    // Move ont to the next question if not the last question
+    const nextQuestion = number + 1
 
+    // if(nextQuestion === )
   }
   return (
     <div className="App">
