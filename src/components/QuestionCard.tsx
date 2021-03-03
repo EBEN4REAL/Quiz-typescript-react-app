@@ -17,7 +17,6 @@ interface Props  {
             </p>
             <p dangerouslySetInnerHTML={{__html: question}}></p>
             <div>
-                 {/* {  answers} */}
                 {answers.map(answer => (
                     <div key={answer}>
                         <button disabled={userAnswer} value={answer} onClick={callback}>

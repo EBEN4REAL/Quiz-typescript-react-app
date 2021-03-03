@@ -50,6 +50,7 @@ const  App = () => {
         correct,
         correctAnswer:  questions[number].correct_answer
       }
+      setUserAnswers(prev => [...prev, answerObject])
     }
   }
   
@@ -79,7 +80,7 @@ const  App = () => {
           />
       )}
      {!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-       <button className="next" onClick={nextQuestion}></button>
+       <button className="next" onClick={nextQuestion}>Next</button>
      ) : null}
       
     </div>
