@@ -39,5 +39,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         border: 3px solid #fff;
         box-shadow: 1px 2px 0px rgba(0 , 0,0,0.1);
         border-radius: 10px;
+        color: white;
+        text-shadow: 0px 1px  0px rgba(0,0,0, 0.25);
     }
 `

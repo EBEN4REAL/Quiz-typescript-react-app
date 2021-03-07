@@ -74,9 +74,11 @@ const  App = () => {
         <div className="App">
           <h1>REACT QUIZ</h1>
           {gameOver || userAnswers.length === TOTAL_QUESTIONS ? 
-            <button className="start" onClick={startTrivia}>
-              Start
-            </button>
+             <div style={{textAlign: 'center'}}>
+                <button className="start" onClick={startTrivia}>
+                Start
+              </button>
+              </div>
             : null
           }
           {!gameOver ?  <p className="score">Score: {score}</p> : null}
@@ -93,7 +95,9 @@ const  App = () => {
               />
           )}
         {!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-          <button className="next" onClick={nextQuestion}>Next</button>
+         <div style={{textAlign: 'center'}}>
+            <button className="next" onClick={nextQuestion}>Next</button>
+         </div>
         ) : null}
           
         </div>

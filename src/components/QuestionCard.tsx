@@ -1,7 +1,8 @@
 import React from 'react'
 // Types
 import {AnswerObject} from '../App'
-
+// styles
+import {ButtonWrapper, Wrapper} from './Question.styles';
 // !! checks if a value is avaiable true otherwise it sets it to false
 interface Props  {
     question: string;
@@ -14,21 +15,21 @@ interface Props  {
 
  const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer, questionNumber, totalQuestions}) => {
     return (
-        <>
+        <Wrapper>
             <p className="number">
                 Question: {questionNumber} / {totalQuestions}
             </p>
             <p dangerouslySetInnerHTML={{__html: question}}></p>
             <div>
                 {answers.map(answer => (
-                    <div key={answer}>
+                    <ButtonWrapper key={answer} correct={userAnswer?.correctAnswer === answer} userClicked={userAnswer?.answer === answer}>
                         <button disabled={!!userAnswer} value={answer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
-                    </div>
+                    </ButtonWrapper>
                 ))}
             </div>
-        </>
+        </Wrapper>
     )
 }
 
