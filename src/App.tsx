@@ -36,6 +36,7 @@ const  App = () => {
     setScore(0)
     setUserAnswers([])
     setLoading(false)
+    setNumber(0)
   }
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
